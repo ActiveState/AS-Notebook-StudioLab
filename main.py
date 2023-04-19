@@ -15,11 +15,7 @@ from sys import platform
 #pathToJupyter is location fo jupyter metadata
 if platform == "linux" or platform == "linux2":  # linux
     pathToRuntimes = os.path.expanduser('~/.cache/activestate')
-    pathToJupyter = os.path.expanduser('~/.local/share/jupyter/kernels')
-elif platform == "darwin":    # OS X
-    pathToRuntimes = os.path.expanduser('~/Library/Caches/ActiveState')
-    pathToJupyter = os.path.expanduser('~/Library/Jupyter/kernels')
-
+    pathToJupyter = "/home/studio-lab-user/.conda/envs/default/share/jupyter/kernels”
 
 # Get jupyter metadata teamplate for install
 with open('template.json') as file:
